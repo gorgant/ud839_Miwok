@@ -46,4 +46,10 @@
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
 
+    <TextView
+        android:id="@+id/GregTestActivity"
+        style="@style/CategoryStyle"
+        android:background="@color/category_gregTest"
+        android:text="@string/category_gregTest" />
+
 </LinearLayout>
