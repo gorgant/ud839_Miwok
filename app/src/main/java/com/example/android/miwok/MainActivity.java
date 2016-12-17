@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
-
         // Set a click listener on that View
         numbers.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers View is clicked on.
@@ -46,7 +45,53 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        
+        // Find the View that shows the family members category
+        TextView familyMembers = (TextView) findViewById(R.id.family);
+        // Set a click listener on that View
+        familyMembers.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+        // Find the View that shows the colors category
+        TextView colors = (TextView) findViewById(R.id.colors);
+        // Set a click listener on that View
+        colors.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
+
+        // Find the View that shows the phrases category
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+        // Set a click listener on that View
+        phrases.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
+            }
+        });
+
+        // Find the View that shows the gregTest category
+        TextView gregTest = (TextView) findViewById(R.id.GregTestActivity);
+        // Set a click listener on that View
+        gregTest.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent gregTestIntent = new Intent(MainActivity.this, GregTestActivity.class);
+                startActivity(gregTestIntent);
+            }
+        });
     }
 
 
