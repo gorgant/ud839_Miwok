@@ -22,6 +22,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import static android.os.Build.VERSION_CODES.M;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+    }
 
-
+    public void openNumbersList(View view){
+        Intent intent = new Intent(this, NumbersActivity.class);
+        startActivity(intent);
     }
 }
