@@ -80,18 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
-
-        // Find the View that shows the gregTest category
-        TextView gregTest = (TextView) findViewById(R.id.GregTestActivity);
-        // Set a click listener on that View
-        gregTest.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent gregTestIntent = new Intent(MainActivity.this, GregTestActivity.class);
-                startActivity(gregTestIntent);
-            }
-        });
     }
 
 

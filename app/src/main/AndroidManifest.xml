@@ -69,12 +69,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity
-            android:name=".GregTestActivity"
-            android:label="@string/category_gregTest"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
 
     </application>
 

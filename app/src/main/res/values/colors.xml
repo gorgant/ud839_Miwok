@@ -34,7 +34,4 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
-
-    <!-- Background color for Greg's test -->
-    <color name="category_gregTest">#E91E63</color>
 </resources>
