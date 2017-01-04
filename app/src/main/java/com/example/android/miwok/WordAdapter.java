@@ -16,11 +16,13 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,14 +33,18 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word>  {
 
+    //store the color resource value
+    int wordBackgroundColor;
+
     /**
      * Create a new {@link WordAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param words is the list of {@link Word}s to be displayed.
      */
-    public WordAdapter(Context context, ArrayList<Word> words) {
+    public WordAdapter(Context context, ArrayList<Word> words, int color) {
         super(context, 0, words);
+        wordBackgroundColor = color;
     }
 
     @Override
@@ -77,6 +83,11 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             // Otherwise hide the ImageView (set visibility to GONE)
             imageView.setVisibility(View.GONE);
         }
+
+        //Find the LinearLayout in the list_item.xml layout that is the text container for the word
+        LinearLayout wordBackground = (LinearLayout) listItemView.findViewById(R.id.word_background);
+        //Set that text container to the appropriate color
+        wordBackground.setBackgroundResource(wordBackgroundColor);
 
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.
