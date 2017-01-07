@@ -48,11 +48,13 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_play_button"
-            android:layout_alignParentRight="true"/>
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_play_button"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
 
     </RelativeLayout>
 </LinearLayout>

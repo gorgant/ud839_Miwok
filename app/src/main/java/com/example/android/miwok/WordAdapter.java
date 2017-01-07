@@ -17,10 +17,12 @@ package com.example.android.miwok;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -84,6 +86,18 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             // Otherwise hide the ImageView (set visibility to GONE)
             imageView.setVisibility(View.GONE);
         }
+
+        //Find the Button in the list_item.xml layout with the ID play_button
+        Button playButton = (Button) listItemView.findViewById(R.id.play_button);
+        //Create a media player to play the audio file
+        final MediaPlayer mediaPlayer = MediaPlayer.create(listItemView.getContext(),currentWord.getAudioResourceId());
+        //Set the button to play the file upon click
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.start();
+            }
+        });
 
         //Find the LinearLayout in the list_item.xml layout that is the text container for the word
         RelativeLayout wordBackground = (RelativeLayout) listItemView.findViewById(R.id.word_background);

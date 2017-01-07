@@ -87,6 +87,14 @@ public class Word {
     }
 
     /**
+     * Return the audio resource ID of the word.
+     */
+    public int getAudioResourceId() {
+        return mAudioResourceID;
+    }
+
+
+    /**
      * Returns whether or not there is an image for this word.
      */
     public boolean hasImage() {
