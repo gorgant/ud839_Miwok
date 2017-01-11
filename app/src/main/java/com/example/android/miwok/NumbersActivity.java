@@ -26,7 +26,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static android.media.MediaPlayer.create;
+
 public class NumbersActivity extends AppCompatActivity {
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +63,13 @@ public class NumbersActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.number_one);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(NumbersActivity.this,"List item clicked",Toast.LENGTH_SHORT).show();
-                mediaPlayer.start();
+                mMediaPlayer = MediaPlayer.create(NumbersActivity.this,R.raw.number_one);
+                mMediaPlayer.start();
 
             }
         });
