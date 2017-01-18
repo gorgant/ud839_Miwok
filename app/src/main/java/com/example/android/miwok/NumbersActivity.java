@@ -70,6 +70,8 @@ public class NumbersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this,words.get(i).getAudioResourceId());
                 mMediaPlayer.start();
+//                Word word = words.get(i); //for testing log.v and String override
+//                Log.v(this.toString(),"Current word: " + word); //for testing log.v and String override
 
             }
         });
