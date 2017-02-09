@@ -18,6 +18,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="actionBarStyle">@style/MiwokAppBarStyle</item>
     </style>
 
     <!-- Style for a category of vocabulary words -->
@@ -29,6 +30,20 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <!-- App bar style -->
+    <style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Text appearance style for a category tab -->
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#FFFFFF</item>
+        <item name="tabSelectedTextColor">#FFFFFF</item>
+        <item name="tabTextColor">#A8A19E</item>
+        <item name="tabBackground">@drawable/tab_color_selector</item>
     </style>
 
 </resources>
